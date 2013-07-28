@@ -60,6 +60,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, 
 static const char *termcmd[]  = { "urxvtc", NULL };
 
 #include "mpdcontrol.c"
+#include "push.c"
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -103,8 +104,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F1,     mpdchange,      {.i = -1} },
 	{ MODKEY,                       XK_F2,     mpdchange,      {.i = +1} },
 	{ MODKEY,                       XK_Escape, mpdcontrol,     {0} },
-	{ MODKEY,                       XK_F1,     mpdchange,      {.i = -1} },
-	{ MODKEY,                       XK_F2,     mpdchange,      {.i = +1} },
+	{ MODKEY|ShiftMask,             XK_j,      pushdown,       {0} },
+	{ MODKEY|ShiftMask,             XK_k,      pushup,         {0} },
 };
 
 /* button definitions */
