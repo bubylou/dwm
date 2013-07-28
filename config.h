@@ -17,13 +17,13 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "main", "web", "term", "ssh", "code", "music", "game", "other" };
+static const char *tags[] = { "main", "web", "term", "ssh", "music", "game" };
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            True,        -1 },
-	{ "Firefox",  NULL,       NULL,       2,            False,       -1 },
-	{ "Steam",    NULL,       NULL,       7,            True,        -1 },
+	{ "Gimp",      NULL,      NULL,       0,            True,        -1 },
+	{ "Iceweasel", NULL,      NULL,       2,            False,       -1 },
+	{ "Steam",     NULL,      NULL,       7,            True,        -1 },
 };
 
 /* layout(s) */
@@ -103,6 +103,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F1,     mpdchange,      {.i = -1} },
 	{ MODKEY,                       XK_F2,     mpdchange,      {.i = +1} },
 	{ MODKEY,                       XK_Escape, mpdcontrol,     {0} },
+	{ MODKEY,                       XK_F1,     mpdchange,      {.i = -1} },
+	{ MODKEY,                       XK_F2,     mpdchange,      {.i = +1} },
 };
 
 /* button definitions */
